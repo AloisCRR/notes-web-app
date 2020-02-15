@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 // Files
 
-app.set(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Export module
 module.exports = app;
