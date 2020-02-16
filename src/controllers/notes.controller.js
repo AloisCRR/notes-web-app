@@ -1,7 +1,7 @@
 const ntsCtrl = {};
 
 ntsCtrl.renderNoteForm = (req,res)=>{
-    res.send('add notes')
+    res.render('notes/add-page');
 };
 
 ntsCtrl.renderAddNote = (req,res)=>{

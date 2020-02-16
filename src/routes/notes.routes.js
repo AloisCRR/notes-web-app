@@ -3,8 +3,8 @@ const router = Router();
 const { renderNoteForm, renderAddNote, renderAllNotes, renderEditNote, renderUpdateNote, renderDeleteNote } = require('../controllers/notes.controller')
 
 // Add notes
-router.get('/notes/add', renderNoteForm);
-router.post('/notes/add', renderAddNote);
+router.get('/notes/add-page', renderNoteForm);
+router.post('/notes/new-note', renderAddNote);
 
 // All notes
 router.get('/notes', renderAllNotes);
