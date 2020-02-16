@@ -9,7 +9,7 @@ ntsCtrl.renderAddNote = async (req,res)=>{
     const { noteDescription, noteTitle } = req.body;
     const newNote = new Note({title: noteTitle, description: noteDescription});
     await newNote.save();
-    res.send(newNote);
+    res.redirect('/notes');
 };
 
 ntsCtrl.renderAllNotes = async (req, res)=>{
@@ -25,8 +25,9 @@ ntsCtrl.renderUpdateNote = (req, res)=>{
     res.send('updated')
 }
 
-ntsCtrl.renderDeleteNote = (req, res) =>{
-    res.send('deleted')
+ntsCtrl.renderDeleteNote = async (req, res) =>{
+    await Note.findByIdAndDelete(req.params.id);
+    res.redirect('back');
 }
 
 module.exports = ntsCtrl;

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const handlebars = require('express-handlebars');
+const methodOverride = require('method-override');
 
 // Start
 
@@ -21,6 +22,7 @@ app.set('view engine', '.hbs');
 // Middlewares
 
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // Global variables
 
