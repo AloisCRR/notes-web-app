@@ -14,6 +14,6 @@ router.get('/notes/edit/:id', renderEditNote)
 router.put('/notes/edit/:id', renderUpdateNote)
 
 // Delete note
-router.delete('/notes/edit/:id', renderDeleteNote)
+router.delete('/notes/delete/:id', renderDeleteNote)
 
 module.exports = router;
