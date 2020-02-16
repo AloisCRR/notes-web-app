@@ -5,7 +5,8 @@ ntsCtrl.renderNoteForm = (req,res)=>{
 };
 
 ntsCtrl.renderAddNote = (req,res)=>{
-    res.send('add notes')
+    console.log(req.body)
+    res.send('new note')
 };
 
 ntsCtrl.renderAllNotes = (req, res)=>{
