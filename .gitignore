@@ -1,3 +1,4 @@
 node_modules
 .env
 src/public/images/greek-vase.png
+src/public/images/user.png
