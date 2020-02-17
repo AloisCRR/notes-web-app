@@ -6,3 +6,12 @@
     </button>
 </div>
 {{/if}}
+
+{{#if err_msg}}
+<div class="alert alert-success alert-dismissible fade show text-center" id="success-alert" role="alert">
+    {{err_msg}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
