@@ -1,0 +1,26 @@
+<div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+        <h5 class="card-title text-center">Log into your account</h5>
+        <hr>
+        <img src="/images/user.png" alt="User" class="rounded-circle mx-auto d-block" style="max-width: 100px;">
+        <hr>
+        <form action="/user/logIn" class="was-validated" method="POST">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control is-invalid" placeholder="Email" name="email" required>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control is-invalid" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        <p class="text-center m-0">Not have an account?<a href="/user/signUp"> Sign Up</a></p>
+    </div>
+</div>
