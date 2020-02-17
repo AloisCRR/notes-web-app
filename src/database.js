@@ -5,7 +5,8 @@ const MONGODB_CONNECTION = `mongodb://${WEB_APP_NOTES_MONGODB_HOST}/${WEB_APP_NO
 
 mongoose.connect(MONGODB_CONNECTION, {
     useUnifiedTopology: true,
-    useNewUrlParser:true
+    useNewUrlParser:true,
+    useCreateIndex: true
 })
     .then(db => console.log('DB Connection: true'))
     .catch(err => console.log(err))

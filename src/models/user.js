@@ -9,7 +9,8 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -24,7 +25,7 @@ userSchema.methods.cryptPass = async pass => {
     return await bcrypt.hash(pass, salt);
 }
 
-userSchema.methods.matchPass = function (pass) {
+userSchema.methods.matchPass = async function (pass) {
     return await bcrypt.compare(pass, this.password);
 }
 
