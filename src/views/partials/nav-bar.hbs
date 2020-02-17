@@ -6,12 +6,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
+        {{#unless user}}
         <li class="nav-item active">
           <a class="nav-link" href="/user/logIn">Login<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/user/signUp">Sign up</a>
         </li>
+        {{else}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             App
@@ -20,11 +22,12 @@
             <a class="dropdown-item" href="/notes">My notes</a>
             <a class="dropdown-item" href="/notes/add-note">New note</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
+            <a class="dropdown-item" href="/user/logOut">Logout</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/about">About</a>
           </div>
         </li>
+        {{/unless}}
       </ul>
     </div>
   </div>
