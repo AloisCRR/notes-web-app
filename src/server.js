@@ -35,15 +35,19 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash());
+app.use(function (req, res, next) {
+    res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+    next();
+});
 
 // Global variables
 
-app.use((req,res,next)=>{
-    
+app.use((req, res, next) => {
+
     res.locals.success_msg = req.flash('success_msg');
     res.locals.err_msg = req.flash('err_msg');
     res.locals.error = req.flash('error');
-    res.locals.user= req.user || null;
+    res.locals.user = req.user || null;
 
     next();
 })
