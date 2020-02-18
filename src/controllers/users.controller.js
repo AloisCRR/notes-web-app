@@ -16,7 +16,7 @@ usrCtrl.signUp = async (req, res) => {
         errors.push({ text: 'Password too weak, it must be at least 6 characters' });
     }
     if (errors.length > 0) {
-        res.render('users/signup', { errors, name, email });
+        res.render('users/signup', { errors });
     } else {
        const userEmail = await User.findOne({email});
        if (userEmail) {
