@@ -45,7 +45,7 @@ usrCtrl.logIn = passport.authenticate('local',{
 usrCtrl.logOut = (req, res) => {
     req.logout();
     req.flash('success_msg', 'Thanks for using the website!');
-    res.redirect('/')
+    res.redirect('/');
 }
 
 module.exports = usrCtrl;
