@@ -67,7 +67,7 @@ Edit notes
 
 | Name                                                            | Description                         |
 | --------------------------------------------------------------- | ----------------------------------- |
-| [Node.js](https://nodejs.org/es/download/)                      | Template rendering, bussiness logic |
+| [Node.js](https://nodejs.org/es/download/)                      | Template rendering, business logic  |
 | [MongoDB](https://www.mongodb.com/try/download/community)       | Database                            |
 | [Express](https://expressjs.com/es/api.html)                    | HTTP Server                         |
 | [Handlebars](https://devdocs.io/handlebars/)                    | Template engine                     |
