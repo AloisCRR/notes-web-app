@@ -1,65 +1,83 @@
-## Description
+# Notes Web App
 
-Project made with **MongoDB**, **Express** and **Node.js** as main technologies. 
+Full web app to take notes with authentication.
 
-### Sections:
+## Run Locally
 
-- Authentication 🔒:
-    - **Passport.js** and **passport-sessions**.
+1. Install both:
 
-- View engine 🎨:
-    - **Handlebars**.
+   - [Node.js](https://nodejs.org/es/download/)
+   - [MongoDB](https://www.mongodb.com/try/download/community)
 
-- Crypt passwords 🔐:
-    - **Bcrypt.js**.
+   You will need to have MongoDB running on port 27017.
 
-- Database 🗃️:
-    - **Mongoose** for schemas.
+1. Clone the project:
 
+   ```bash
+   git clone https://github.com/AloisCRR/notes-web-app.git
+   ```
 
-## Final project
+1. Go to the project directory:
 
-- Initial screen
-<p align='center'>
-<img src='https://imgur.com/hp6XUzD.png' alt='initial-screen' width="500px">
-</p>
+   ```bash
+   cd notes-web-app
+   ```
 
-- Sign up
+1. Install dependencies:
 
-<p align='center'>
-<img src='https://imgur.com/JVWImML.png' alt='sign-up' width="500px">
-</p>
+   ```bash
+   npm install
+   ```
 
-- Login
+1. Start the dev server:
 
-<p align='center'>
-<img src='https://imgur.com/MQIOrbp.png' alt='login' width="500px">
-</p>
+   ```bash
+   npm run dev
+   ```
 
-- Add note
+   Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
-<p align='center'>
-<img src='https://imgur.com/A4xRDO4.png' alt='login' width="500px">
-</p>
+## Screenshots
 
-- All notes
+Initial screen
 
-<p align='center'>
-<img src='https://imgur.com/IfS38O0.png' alt='login' width="500px">
-</p>
+![Screenshot](https://imgur.com/hp6XUzD.png)
 
-- Edit notes
+Sign up
 
-<p align='center'>
-<img src='https://imgur.com/gyZYl5X.png' alt='login' width="500px">
-</p>
+![Screenshot](https://imgur.com/JVWImML.png)
 
+Sign in
 
-## Documentations
+![Screenshot](https://imgur.com/MQIOrbp.png)
 
-- [Express](https://expressjs.com/es/api.html)
-- [Handlebars](https://devdocs.io/handlebars/)
-- [Express sessions](https://github.com/expressjs/session#readme)
-- [Method override](https://github.com/expressjs/method-override#readme)
-- [Mongoose](https://mongoosejs.com/docs/api.html)
-- [Passport local](http://www.passportjs.org/docs/)
+Add note
+
+![Screenshot](https://imgur.com/A4xRDO4.png)
+
+All notes
+
+![Screenshot](https://imgur.com/IfS38O0.png)
+
+Edit notes
+
+![Screenshot](https://imgur.com/gyZYl5X.png)
+
+## Tech Stack
+
+| Name                                                            | Description                         |
+| --------------------------------------------------------------- | ----------------------------------- |
+| [Node.js](https://nodejs.org/es/download/)                      | Template rendering, bussiness logic |
+| [MongoDB](https://www.mongodb.com/try/download/community)       | Database                            |
+| [Express](https://expressjs.com/es/api.html)                    | HTTP Server                         |
+| [Handlebars](https://devdocs.io/handlebars/)                    | Template engine                     |
+| [Express sessions](https://github.com/expressjs/session#readme) | Required by passport session        |
+| [Mongoose](https://mongoosejs.com/docs/api.html)                | ODM (Object Data Modeling)          |
+| [Passport local](http://www.passportjs.org/docs/)               | Handles auth logic                  |
+
+## Roadmap
+
+- [x] App functionality
+- [ ] Testing
+- [ ] Hosting, domain, etc.
+- [ ] CI/CD
